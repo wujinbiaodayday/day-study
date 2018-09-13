@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day-study.iml" filepath="$PROJECT_DIR$/day-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-api/study-api.iml" filepath="$PROJECT_DIR$/study-api/study-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-consume/study-consume.iml" filepath="$PROJECT_DIR$/study-consume/study-consume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-service/study-service.iml" filepath="$PROJECT_DIR$/study-service/study-service.iml" />
+    </modules>
+  </component>
+</project>

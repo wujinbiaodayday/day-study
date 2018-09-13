@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="study-api" />
+        <module name="study-consume" />
+        <module name="study-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="day-study" target="1.8" />
+      <module name="study-api" target="1.8" />
+      <module name="study-consume" target="1.8" />
+      <module name="study-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+.idea/workspace.xml
+study-api/target/
+study-consume/target/
+study-service/target/
+.idea/*
+day-study.iml
+study-api/study-api.iml
+study-consume/study-consume.iml
+study-service/study-service.iml
