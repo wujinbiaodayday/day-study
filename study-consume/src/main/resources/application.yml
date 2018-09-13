@@ -1,3 +1,8 @@
+spring:
+  redis:
+    host: 10.23.11.129
+    port: 16379
+    password: Ddc@2018
 server:
   port: 8083
 dubbo:
