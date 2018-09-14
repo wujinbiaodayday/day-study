@@ -1,11 +1,6 @@
-package com.study.api.params;
+package com.study.dto;
 
-import java.io.Serializable;
-
-/**
- * 用户实体类
- */
-public class UserEntity implements Serializable {
+public class User {
 
     private Long id;
 
@@ -56,4 +51,5 @@ public class UserEntity implements Serializable {
                 ", age=" + age +
                 '}';
     }
+
 }
