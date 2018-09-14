@@ -32,7 +32,7 @@ public class ResutModel implements Serializable {
     }
 
     public static ResutModel FAIL(String msg, String errorInfo) {
-        ResutModel resut = new ResutModel(Constants.SUCCESS, msg, errorInfo);
+        ResutModel resut = new ResutModel(Constants.FAIL, msg, errorInfo);
         return resut;
     }
 
