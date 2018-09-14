@@ -14,7 +14,7 @@ public interface UserService {
      *
      * @return
      */
-    List<UserEntity> getAllUser();
+    List<UserEntity> getAllUser() throws Exception;
 
     /**
      * 新增
@@ -24,7 +24,7 @@ public interface UserService {
      * @param age
      * @return
      */
-    String insertUser(String userName, String password, Integer age);
+    String insertUser(String userName, String password, Integer age) throws Exception ;
 
     /**
      * 修改
@@ -35,13 +35,13 @@ public interface UserService {
      * @param id
      * @return
      */
-    String updateUser(String userName, String password, Integer age, Integer id);
+    String updateUser(String userName, String password, Integer age, Integer id) throws Exception ;
 
     /**
      * 删除
      *
      * @param id
      */
-    String deleteUser(Integer id);
+    String deleteUser(Integer id) throws Exception ;
 
 }

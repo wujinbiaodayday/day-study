@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public List<UserEntity> getAllUser() {
+    public List<UserEntity> getAllUser() throws Exception {
         List<User> userList = userMapper.getAllUser();
         if (CollectionUtils.isEmpty(userList)) {
             return null;
@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public String insertUser(String userName, String password, Integer age) {
+    public String insertUser(String userName, String password, Integer age) throws Exception {
         int flag = userMapper.add(userName, password, age);
         if (flag == 0) {
             return "新增失败";
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public String updateUser(String userName, String password, Integer age, Integer id) {
+    public String updateUser(String userName, String password, Integer age, Integer id) throws Exception {
         int flag = userMapper.update(userName, password, age, id);
         if (flag == 0) {
             return "修改失败";
@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public String deleteUser(Integer id) {
+    public String deleteUser(Integer id) throws Exception {
         int flag = userMapper.delete(id);
         if (flag == 0) {
             return "删除失败";
