@@ -1,7 +1,7 @@
 package com.study.controller;
 
-import com.alibaba.dubbo.common.json.JSON;
 import com.alibaba.dubbo.common.utils.StringUtils;
+import com.alibaba.fastjson.JSON;
 import com.study.api.service.TestExampleApi;
 import com.study.model.UserModel;
 import com.study.util.Constants;
@@ -62,7 +62,7 @@ public class TestExampleController {
     public String listByName(@RequestParam(value = "name", required = true) String name) throws IOException {
         UserModel userModel = new UserModel();
         userModel.setName(name);
-        return JSON.json(userModel);
+        return JSON.toJSONString(userModel);
     }
 
     /**
@@ -70,7 +70,7 @@ public class TestExampleController {
      */
     @RequestMapping(value="/addUser",method = RequestMethod.GET)
     public String addUser(@RequestBody UserModel userModel) throws IOException {
-        return JSON.json(userModel);
+        return JSON.toJSONString(userModel);
     }
 
     /**
