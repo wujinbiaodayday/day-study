@@ -3,7 +3,8 @@ package com.study.controller;
 import com.study.api.params.UserEntity;
 import com.study.api.service.UserService;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.models.auth.In;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,8 @@ import java.util.List;
  */
 @RestController
 public class UserController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
     @Autowired
