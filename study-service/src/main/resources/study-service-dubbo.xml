@@ -10,5 +10,8 @@
     <!--声明服务引用，与服务声明接口类型一致-->
     <dubbo:service interface="com.study.api.service.TestExampleApi" ref="testExampleApi" />
 
+    <!--user service-->
+    <dubbo:service interface="com.study.api.service.UserService" ref="userServiceImpl" />
+
 
 </beans>
