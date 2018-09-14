@@ -7,6 +7,7 @@ import com.study.dao.UserMapper;
 import com.study.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -27,17 +28,32 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String insertUser(UserEntity userEntity) {
+    @Transactional
+    public String insertUser(String userName, String password, Integer age) {
+        int flag = userMapper.add(userName, password, age);
+        if (flag == 0) {
+            return "新增失败";
+        }
         return "新增成功";
     }
 
     @Override
-    public String updateUser(UserEntity userEntity) {
+    @Transactional
+    public String updateUser(String userName, String password, Integer age, Integer id) {
+        int flag = userMapper.update(userName, password, age, id);
+        if (flag == 0) {
+            return "修改失败";
+        }
         return "修改成功";
     }
 
     @Override
-    public String deleteUser(Long id) {
+    @Transactional
+    public String deleteUser(Integer id) {
+        int flag = userMapper.delete(id);
+        if (flag == 0) {
+            return "删除失败";
+        }
         return "删除成功";
     }
 }

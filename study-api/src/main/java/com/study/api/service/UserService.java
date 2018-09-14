@@ -11,26 +11,37 @@ public interface UserService {
 
     /**
      * 查询
+     *
      * @return
      */
     List<UserEntity> getAllUser();
 
     /**
      * 新增
-     * @param userEntity
+     *
+     * @param userName
+     * @param password
+     * @param age
+     * @return
      */
-    String insertUser(UserEntity userEntity);
+    String insertUser(String userName, String password, Integer age);
 
     /**
      * 修改
-     * @param userEntity
+     *
+     * @param userName
+     * @param password
+     * @param age
+     * @param id
+     * @return
      */
-    String updateUser(UserEntity userEntity);
+    String updateUser(String userName, String password, Integer age, Integer id);
 
     /**
      * 删除
+     *
      * @param id
      */
-    String deleteUser(Long id);
+    String deleteUser(Integer id);
 
 }

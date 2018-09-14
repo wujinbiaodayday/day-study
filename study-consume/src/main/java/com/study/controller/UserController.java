@@ -3,6 +3,7 @@ package com.study.controller;
 import com.study.api.params.UserEntity;
 import com.study.api.service.UserService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,32 +26,36 @@ public class UserController {
     @ApiOperation(value="用户查询", notes = "用户查询")
     @RequestMapping(value = "/getAllUser", method = RequestMethod.GET)
     public List<UserEntity> getAllUser() {
-
         return userService.getAllUser();
     }
 
     /**
      * 用户新增
-     * @param userEntity
+     * @param userName
+     * @param password
+     * @param age
      * @return
      */
     @ApiOperation(value="用户新增", notes = "用户新增")
     @RequestMapping(value = "/insertUser", method = RequestMethod.GET)
-    public String insertUser(@RequestBody UserEntity userEntity) {
-
-        return userService.insertUser(userEntity);
+    public String insertUser(@RequestParam String userName, @RequestParam String password,
+                             @RequestParam Integer age) {
+        return userService.insertUser(userName, password, age);
     }
 
     /**
      * 用户修改
-     * @param userEntity
+     * @param userName
+     * @param password
+     * @param age
+     * @param id
      * @return
      */
     @ApiOperation(value="用户修改", notes = "用户修改")
     @RequestMapping(value = "/updateUser", method = RequestMethod.GET)
-    public String updateUser(@RequestBody UserEntity userEntity) {
-
-        return userService.updateUser(userEntity);
+    public String updateUser(@RequestParam String userName, @RequestParam String password,
+                             @RequestParam Integer age, @RequestParam Integer id) {
+        return userService.updateUser(userName, password, age, id);
     }
 
     /**
@@ -60,8 +65,7 @@ public class UserController {
      */
     @ApiOperation(value="用户删除", notes = "用户删除")
     @RequestMapping(value = "/deleteUser/{id}", method = RequestMethod.GET)
-    public String deleteUser(@PathVariable Long id) {
-
+    public String deleteUser(@PathVariable Integer id) {
         return userService.deleteUser(id);
     }
 
